@@ -6,7 +6,7 @@
       <v-spacer></v-spacer>
       <v-btn
         v-for="link in links"
-        :key="`${link.label}`-footer-link"
+        :key="`${link.label}`"
         text
         rounded
         :to="link.url"
@@ -22,7 +22,7 @@
       <v-row justify="center" no-gutters>
         <v-btn
           v-for="link in links"
-          :key="`${link.label}`-footer-link"
+          :key="`${link.label}`"
           color="white"
           text
           rounded
