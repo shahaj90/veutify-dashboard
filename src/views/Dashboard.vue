@@ -15,11 +15,11 @@
     </v-row>
 
     <v-row>
-      <v-col cols="12" md="8" xs="12">
+      <v-col cols="12" md="7" xs="12">
         <EmployeesTable :employees="employees" @select-employee="setEmployee" />
       </v-col>
       
-      <v-col cols="12" md="4" xs="12">
+      <v-col cols="12" md="5" xs="12">
         <EventTimeline :timeline="timeline" />
       </v-col>
     </v-row>
