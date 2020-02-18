@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Nav bar -->
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary" dark fixed>
       <v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
