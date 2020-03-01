@@ -5,7 +5,7 @@
       <v-toolbar-title>Vuetify Dashboard</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn
-        v-for="link in links"
+        v-for="link in navBars"
         :key="`${link.label}`"
         text
         rounded
@@ -21,7 +21,7 @@
     <v-footer color="primary lighten-1" padless>
       <v-row justify="center" no-gutters>
         <v-btn
-          v-for="link in links"
+          v-for="link in navBars"
           :key="`${link.label}`"
           color="white"
           text
@@ -30,8 +30,7 @@
           :to="link.url"
         >{{ link.label }}</v-btn>
         <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
-          {{ new Date().getFullYear() }} —
-          <strong>Vuetify</strong>
+          <strong>Developed By Shahaj</strong>
         </v-col>
       </v-row>
     </v-footer>
@@ -39,28 +38,24 @@
 </template>
 
 <script>
+import store from "./store/auth";
 export default {
   name: "App",
+  watch: {
+    $route(to) {
+      document.title = to.meta.title || "Vuetify-Dashboard";
+    }
+  },
+  created() {
+    store.dispatch("getNavbar");
+  },
+  computed: {
+    navBars: function() {
+      return store.state.navBars;
+    }
+  },
   data: () => ({
-    showPassword: false,
-    links: [
-      {
-        label: "Home",
-        url: "/"
-      },
-      {
-        label: "Login",
-        url: "/login"
-      },
-      {
-        label: "Sign Up",
-        url: "/signup"
-      },
-      {
-        label: "Deshboard",
-        url: "/dashboard"
-      }
-    ]
+    showPassword: false
   })
 };
 </script>

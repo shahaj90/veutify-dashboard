@@ -27,7 +27,7 @@
     <v-card-actions>
       <v-btn color="info" :disabled="!valid" @click="login">Login</v-btn>
       <v-spacer></v-spacer>
-      <v-btn color="success" to="/signup">Register</v-btn>
+      <v-btn color="success" to="/signup">signup</v-btn>
     </v-card-actions>
   </v-card>
 </template>
