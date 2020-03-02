@@ -10,17 +10,30 @@ export default new Vuex.Store({
         navBars: [],
         publicNavBars: [{
                 label: "Login",
-                url: "/login"
+                url: "/"
             },
             {
                 label: "Sign Up",
                 url: "/signup"
+            },
+            {
+                label: "Dashboard",
+                url: "/dashboard"
+            },
+            {
+                label: "User List",
+                url: "/user-list"
             }
         ],
         authNavBars: [{
-            label: "Dashboard",
-            url: "/dashboard"
-        }],
+                label: "Dashboard",
+                url: "/dashboard"
+            },
+            {
+                label: "User List",
+                url: "/user-list"
+            }
+        ],
     },
     getters: {
 

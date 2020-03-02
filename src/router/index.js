@@ -14,7 +14,17 @@ const routes = [{
         }
     },
     {
-        path: '/login',
+        path: '/user-list',
+        name: 'dashboard',
+        component: () =>
+            import ('../views/UserList.vue'),
+        meta: {
+            auth: true,
+            title: 'Dashboard'
+        }
+    },
+    {
+        path: '/',
         name: 'login',
         component: () =>
             import ('../views/Login.vue'),
